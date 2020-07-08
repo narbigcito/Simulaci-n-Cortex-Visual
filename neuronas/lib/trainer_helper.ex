@@ -66,8 +66,8 @@ defmodule TrainerHelper do
        ) do
     case {expected_state_neuron and state_neuron, vote_result} do
       {true, true} -> weight + 1
-      {true, false} -> weight + 1
-      {false, true} -> weight - 1
+      {true, false} -> weight + 2
+      {false, true} -> weight - 2
       {false, false} -> weight - 1
     end
   end
